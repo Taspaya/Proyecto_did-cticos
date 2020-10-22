@@ -25,6 +25,7 @@ public class CameraControl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         rb.velocity = speed * (direction.normalized);
         FollowTravel();
+
         DriveVirus();
     }
 
@@ -39,6 +40,7 @@ public class CameraControl : MonoBehaviour
     {
 
         float qe = -Input.GetAxis("QandE") * 90 * Time.deltaTime;
+        rb.velocity = rb.velocity + new Vector3(qe * speed/3,0,0);
         Debug.Log(qe);
     }
 
