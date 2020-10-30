@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField] Text TextScoreUIP;
     [SerializeField] Text TextScoreUIV;
+    public Image LifeBar;
     private int scoreVirus;
     private int scorePerson;
     public int ScoreVLife
@@ -16,6 +17,7 @@ public class ScoreManager : MonoBehaviour
             scoreVirus = value;
 
             TextScoreUIV.text = ScoreVLife.ToString();
+            LifeBar.rectTransform.localScale = new Vector3((float)value /100,1,1);
 
             PlayerPrefs.SetInt("ScoreVLife", ScoreVLife);
         }
