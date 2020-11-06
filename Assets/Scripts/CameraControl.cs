@@ -41,7 +41,7 @@ public class CameraControl : MonoBehaviour
 
         float qe = -Input.GetAxis("QandE") * 90 * Time.deltaTime;
         rb.velocity = rb.velocity + new Vector3(qe * speed/3,0,0);
-        Debug.Log(qe);
+        //Debug.Log(qe);
     }
 
 

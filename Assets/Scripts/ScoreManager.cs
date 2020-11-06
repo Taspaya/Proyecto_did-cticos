@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] Text TextScoreUIP;
@@ -9,6 +10,21 @@ public class ScoreManager : MonoBehaviour
     public Image LifeBar;
     private int scoreVirus;
     private int scorePerson;
+
+
+
+    public GameObject Player;
+
+
+
+    void Update()
+    {
+        if (Player.transform.position.z > 250)
+        {
+            StageClear();
+        }
+    }
+
     public int ScoreVLife
     {
         get { return scoreVirus; }
@@ -34,6 +50,22 @@ public class ScoreManager : MonoBehaviour
             TextScoreUIP.text = ScorePLife.ToString();
 
             PlayerPrefs.SetInt("ScorePLife", ScorePLife);
+        }
+    }
+
+    public void StageClear()
+    {
+        Debug.Log("YOU WIN!");
+        int currentStage = SceneManager.GetActiveScene().buildIndex;
+        if (currentStage == SceneManager.sceneCountInBuildSettings-1)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(currentStage + 1);
+
         }
     }
 }

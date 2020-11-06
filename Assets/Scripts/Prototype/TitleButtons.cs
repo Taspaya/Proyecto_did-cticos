@@ -29,7 +29,7 @@ public class TitleButtons : MonoBehaviour
 
     public void ButtPlay()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void ButtInstructions()
