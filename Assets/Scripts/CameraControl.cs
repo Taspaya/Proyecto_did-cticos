@@ -7,16 +7,18 @@ public class CameraControl : MonoBehaviour
     public float speed;
     private Rigidbody rb;
 
-    public Transform[] Travel;
+
+
+    //public Transform[] Travel;
     private int travelIndex;
     private Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
-        travelIndex = 0;
+
         rb = gameObject.GetComponent<Rigidbody>();
-        direction = Travel[travelIndex].position - transform.position;
-        transform.rotation = Quaternion.LookRotation(-Vector3.RotateTowards(Travel[travelIndex].position, transform.position, Time.deltaTime, 0.0f));
+        speed = 20;
+
     }
 
     // Update is called once per frame
@@ -24,16 +26,18 @@ public class CameraControl : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         rb.velocity = speed * (direction.normalized);
-        FollowTravel();
+        //FollowTravel();
 
-        DriveVirus();
+        //DriveVirus();
+        advance();
+        speedRecoveryAfterBump();
     }
 
 
     private void FollowTravel()
     {
-        if (travelIndex < Travel.Length -1 && Vector3.Distance(transform.position, Travel[travelIndex].position) <= 1) { travelIndex++; }
-        direction = Travel[travelIndex].position - transform.position; 
+        //if (travelIndex < Travel.Length -1 && Vector3.Distance(transform.position, Travel[travelIndex].position) <= 1) { travelIndex++; }
+        //direction = Travel[travelIndex].position - transform.position; 
     }
 
     private void DriveVirus()
@@ -42,6 +46,17 @@ public class CameraControl : MonoBehaviour
         float qe = -Input.GetAxis("QandE") * 90 * Time.deltaTime;
         rb.velocity = rb.velocity + new Vector3(qe * speed/3,0,0);
         //Debug.Log(qe);
+    }
+
+    private void advance()
+    {
+        //transform.Translate(new Vector3(0, 0, 1));
+        GetComponent<Rigidbody>().AddRelativeForce(0, 0, speed);
+    }
+
+    void speedRecoveryAfterBump()
+    {
+        if (speed < 20) { speed++;}
     }
 
 
