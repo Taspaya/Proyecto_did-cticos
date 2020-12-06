@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
+    public AudioSource hitSound;
 
     public int damage;
 
@@ -18,6 +19,7 @@ public class Obstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hitSound = GetComponent<AudioSource>();
         scoreManager = FindObjectOfType<ScoreManager>();
         cameraControl = FindObjectOfType<CameraControl>();
 
@@ -35,6 +37,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        hitSound.Play();
         scoreManager.ScoreVLife -= damage;
         cameraControl.speed = -20; //A method in the CameraControl sript will reset the speed back to normal after a few seconds have passed since the collision.
 
