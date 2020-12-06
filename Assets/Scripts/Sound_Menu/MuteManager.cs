@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class MuteManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public AudioSource Awake;
+    public AudioSource Slow;
+
+    void OnTriggerEnter(Collider collider)
     {
-        
+        if (collider.tag == "Player")
+        {
+            Awake.mute =!Awake.mute;
+            Debug.Log("música lenta");
+            Slow.Play();
+        }
     }
+  
 }

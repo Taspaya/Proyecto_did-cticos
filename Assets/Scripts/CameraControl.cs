@@ -6,6 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
+    private bool final = false;
 
 
 
@@ -53,10 +54,23 @@ public class CameraControl : MonoBehaviour
         //transform.Translate(new Vector3(0, 0, 1));
         GetComponent<Rigidbody>().AddRelativeForce(0, 0, speed);
     }
-
+    void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("cámara lenta colision");
+        if (collider.tag == "TriggerFinal")
+        {
+            final = true;
+        }
+    }
     void speedRecoveryAfterBump()
     {
-        if (speed < 20) { speed++;}
+        if (final == false)
+        {
+            if (speed < 20) { speed++; }
+        }
+        else
+            speed = 7;
+        
     }
 
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Person
   - Place
+  - TriggerFinal
   layers:
   - Default
   - TransparentFX
