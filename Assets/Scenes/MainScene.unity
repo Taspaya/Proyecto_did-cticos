@@ -5414,6 +5414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Awake: {fileID: 725713990}
   Slow: {fileID: 583045048}
+  cam: {fileID: 918009707}
 --- !u!1 &1241005708
 GameObject:
   m_ObjectHideFlags: 0
