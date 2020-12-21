@@ -14,12 +14,13 @@ public class ScoreManager : MonoBehaviour
 
 
     public GameObject Player;
+    public GameObject Target;
 
 
 
     void Update()
     {
-        if (Player.transform.position.z > 250)
+        if (Vector3.Distance(Player.transform.position, Target.transform.position) < 20)
         {
             StageClear();
         }

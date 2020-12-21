@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public float speed;
+    public float maxSpeed;
     private Rigidbody rb;
     private bool final = false;
 
@@ -18,7 +19,8 @@ public class CameraControl : MonoBehaviour
     {
 
         rb = gameObject.GetComponent<Rigidbody>();
-        speed = 20;
+        maxSpeed = 20; //20
+        speed = maxSpeed; //20
 
     }
 
@@ -66,7 +68,7 @@ public class CameraControl : MonoBehaviour
     {
         if (final == false)
         {
-            if (speed < 20) { speed++; }
+            if (speed < maxSpeed) { speed++; }
         }
         else
             speed = 7;
