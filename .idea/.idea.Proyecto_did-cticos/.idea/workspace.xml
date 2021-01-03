@@ -10,10 +10,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Materials/NPC/TintController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Materials/NPC/TintController.cs" />
       </list>
     </option>
   </component>
@@ -58,6 +62,7 @@
       <updated>1608138230163</updated>
       <workItem from="1608138255422" duration="475000" />
       <workItem from="1608139779232" duration="461000" />
+      <workItem from="1609671204035" duration="4053000" />
     </task>
     <servers />
   </component>
@@ -68,5 +73,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1609677714097">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.86.1366.768@0.0.1920.1080" timestamp="1609677714097" />
   </component>
 </project>

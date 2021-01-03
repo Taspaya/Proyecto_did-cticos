@@ -39,7 +39,7 @@ public class Obstacle : MonoBehaviour
     {
         hitSound.Play();
         scoreManager.ScoreVLife -= damage;
-        cameraControl.speed = -20; //A method in the CameraControl sript will reset the speed back to normal after a few seconds have passed since the collision.
+        cameraControl.speed = -50; //A method in the CameraControl sript will reset the speed back to normal after a few seconds have passed since the collision.
 
         if (scoreManager.ScoreVLife <= 0)
         {
@@ -54,7 +54,7 @@ public class Obstacle : MonoBehaviour
     public void movement()
     {
 
-        Debug.Log("Myposition: " + myPosition + "....." + transform.position);
+        //Debug.Log("Myposition: " + myPosition + "....." + transform.position);
         if (myPosition == 1)
         {
             transform.Translate(0, 1, 0);
