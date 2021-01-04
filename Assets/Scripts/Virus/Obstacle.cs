@@ -40,6 +40,7 @@ public class Obstacle : MonoBehaviour
         hitSound.Play();
         scoreManager.ScoreVLife -= damage;
         cameraControl.speed = -50; //A method in the CameraControl sript will reset the speed back to normal after a few seconds have passed since the collision.
+        collision.gameObject.GetComponentInChildren<virusCloudManager>().DestroyCant(damage);
 
         if (scoreManager.ScoreVLife <= 0)
         {
