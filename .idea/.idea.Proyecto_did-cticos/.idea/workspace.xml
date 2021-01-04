@@ -18,6 +18,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Obstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/NPC/TintController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/virusCloudManager.cs" />
       </list>
     </option>
   </component>
@@ -63,6 +64,7 @@
       <workItem from="1608138255422" duration="475000" />
       <workItem from="1608139779232" duration="461000" />
       <workItem from="1609671204035" duration="4053000" />
+      <workItem from="1609756856369" duration="1982000" />
     </task>
     <servers />
   </component>

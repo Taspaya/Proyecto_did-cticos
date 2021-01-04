@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23002586, g: 0.27382213, b: 0.29740077, a: 1}
+  m_IndirectSpecularColor: {r: 0.23002593, g: 0.2738222, b: 0.29740077, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -732,6 +732,7 @@ MonoBehaviour:
   tintAmount: 1
   tintMat: {fileID: 2100000, guid: ccd568eb83e796a4e99ae779726993b7, type: 2}
   blinkSpeed: 5
+  rojoVa: 1
 --- !u!1 &459072036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,8 +5380,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {fileID: 0}
-  cant: 100
-  offset: 3
+  cant: 20
+  offset: 1.5
   decreaser: 0
   virus: {fileID: 4266899588470775176, guid: f441bb0f7f816a043ab8eca8744a1428, type: 3}
 --- !u!1001 &2101121543
@@ -5786,12 +5787,12 @@ PrefabInstance:
     - target: {fileID: 1303014086996416975, guid: eac6b6f43c81f1f4aafcf55980fe85d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1828158825491858293, guid: eac6b6f43c81f1f4aafcf55980fe85d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 111.14
+      value: 12.7
       objectReference: {fileID: 0}
     - target: {fileID: 1828158825491858293, guid: eac6b6f43c81f1f4aafcf55980fe85d7,
         type: 3}
