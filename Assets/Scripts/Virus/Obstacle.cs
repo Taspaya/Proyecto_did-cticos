@@ -57,7 +57,7 @@ public class Obstacle : MonoBehaviour
     public void movement()
     {
         
-        Debug.Log("Myposition: " + myPosition + "....." + transform.position);
+        //Debug.Log("Myposition: " + myPosition + "....." + transform.position);
         if (myPosition == 1)
         {
             transform.Translate(0, 1 * speedControl, 0);

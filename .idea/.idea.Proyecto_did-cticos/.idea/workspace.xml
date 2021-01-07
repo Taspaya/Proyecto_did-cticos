@@ -20,6 +20,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/virusCloudManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Virus/Obstacle.cs" />
+        <option value="$PROJECT_DIR$/Assets/VentilacionControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraControl.cs" />
       </list>
     </option>
   </component>
@@ -67,6 +69,7 @@
       <workItem from="1609671204035" duration="4053000" />
       <workItem from="1609756856369" duration="2620000" />
       <workItem from="1610015587379" duration="4431000" />
+      <workItem from="1610047355041" duration="4467000" />
     </task>
     <servers />
   </component>
