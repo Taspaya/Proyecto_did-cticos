@@ -57,10 +57,9 @@ public class Obstacle : MonoBehaviour
     public void movement()
     {
         
-<<<<<<< Updated upstream
+
         //Debug.Log("Myposition: " + myPosition + "....." + transform.position);
-=======
->>>>>>> Stashed changes
+
         if (myPosition == 1)
         {
             transform.Translate(0, 1 * speedControl, 0);
