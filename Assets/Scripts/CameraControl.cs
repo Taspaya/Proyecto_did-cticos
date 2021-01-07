@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,9 @@ public class CameraControl : MonoBehaviour
     public float maxSpeed;
     private Rigidbody rb;
     private bool final = false;
-
+    
+    public bool inWindZone;
+    public GameObject windZone;
 
 
     //public Transform[] Travel;
@@ -21,14 +24,26 @@ public class CameraControl : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         maxSpeed = 20; //20
         speed = maxSpeed; //20
+        
+        
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         Cursor.lockState = CursorLockMode.Locked;
-        rb.velocity = speed * (direction.normalized);
+        if (inWindZone)
+        {
+            //rb.AddForce(windZone.GetComponent<VentilacionControl>().direction * windZone.GetComponent<VentilacionControl>().strength);
+            rb.velocity = windZone.GetComponent<VentilacionControl>().strength * windZone.GetComponent<VentilacionControl>().direction.normalized ;
+        }
+        else
+        {
+            rb.velocity = speed * (direction.normalized);
+        }
+
         //FollowTravel();
 
         //DriveVirus();
@@ -58,12 +73,27 @@ public class CameraControl : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("cámara lenta colision");
         if (collider.tag == "TriggerFinal")
         {
+            Debug.Log("cámara lenta colision");
             final = true;
         }
+
+        if (collider.gameObject.tag == "WindArea")
+        {
+            windZone = collider.gameObject;
+            inWindZone = true;
+        }
     }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "WindArea")
+        {
+            inWindZone = false;
+        }
+    }
+
     void speedRecoveryAfterBump()
     {
         if (final == false)
