@@ -48,7 +48,7 @@ public class Obstacle : MonoBehaviour
         {
             Debug.Log("Game Over! Show the game over screen.");
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
 
         //Destroy(this.gameObject);

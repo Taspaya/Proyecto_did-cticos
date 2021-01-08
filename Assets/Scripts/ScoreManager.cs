@@ -61,7 +61,7 @@ public class ScoreManager : MonoBehaviour
         if (currentStage == SceneManager.sceneCountInBuildSettings-1)
         {
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else
         {
