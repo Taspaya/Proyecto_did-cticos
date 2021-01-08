@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Obstacle : MonoBehaviour
+public class ObstaclePoints : MonoBehaviour
 {
     public AudioSource hitSound;
 
@@ -22,9 +22,9 @@ public class Obstacle : MonoBehaviour
         hitSound = GetComponent<AudioSource>();
         scoreManager = FindObjectOfType<ScoreManager>();
         cameraControl = FindObjectOfType<CameraControl>();
-        
 
-        
+
+
         damage = 10;
         //knockback = 1;
         //impactRange = 1;
@@ -37,7 +37,7 @@ public class Obstacle : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {   
+    {
         Debug.Log("COLISON CON OBSTACULO " + this.gameObject.name);
         hitSound.Play();
         scoreManager.ScoreVLife -= damage;
@@ -56,7 +56,7 @@ public class Obstacle : MonoBehaviour
 
     public void movement()
     {
-        
+
 
         //Debug.Log("Myposition: " + myPosition + "....." + transform.position);
 
@@ -71,7 +71,7 @@ public class Obstacle : MonoBehaviour
         {
             transform.Translate(1 * speedControl, 0, 0);
             if (transform.position.x > 20) { myPosition = 3; }
-            
+
             return;
         }
 

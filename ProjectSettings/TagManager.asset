@@ -8,6 +8,8 @@ TagManager:
   - Place
   - TriggerFinal
   - WindArea
+  - Contagiable
+  - NoContagiable
   layers:
   - Default
   - TransparentFX
