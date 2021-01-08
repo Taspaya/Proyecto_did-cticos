@@ -748,6 +748,11 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8175150924796964204, guid: 510b1e69b30e15c48a0bb48a683c1a0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8266235339050012215, guid: 510b1e69b30e15c48a0bb48a683c1a0f,
         type: 3}
       propertyPath: m_Name
@@ -9322,7 +9327,7 @@ MonoBehaviour:
   damage: 10
   scoreManager: {fileID: 1541546101}
   cameraControl: {fileID: 918009710}
-  myPosition: 1
+  myPosition: 0
   speedControl: 0
 --- !u!64 &1352347524
 MeshCollider:
